@@ -1,0 +1,18 @@
+{
+  "regions": [
+    "body",
+    "header",
+    "toolbar"
+  ],
+  "pullRefresh": {
+    "disabled": true
+  },
+  "editorState": "default",
+  "data": {},
+  "id": "u:033abf50dd76",
+  "asideResizor": false,
+  "type": "page",
+  "title": "学生管理",
+  "asideSticky": false,
+  "body": []
+}
