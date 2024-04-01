@@ -1,0 +1,1 @@
+import{d as e,r as a,aP as c,aQ as t,aR as n}from"./index.js";const o={class:"h-full"},r=["src"],f=e({__name:"index",setup(l){const s=a("https://admin-docs.soybeanjs.cn/");return(_,d)=>(c(),t("div",o,[n("iframe",{class:"wh-full",src:s.value},null,8,r)]))}});export{f as default};

@@ -2,12 +2,12 @@ logs
 .trash
 *.db
 *.session
-data/amis_editor
+#data/amis_editor
 data/pages_temp
 data/upload
 amis.json
-public/soy-admin
-public/amis-editor
+##public/soy-admin
+#public/amis-editor
 public/amis
 public/pdfjs
 data/templates
