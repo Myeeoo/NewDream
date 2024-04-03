@@ -1,62 +1,60 @@
 {
   "path": "$url.path",
   "settings": {
-    "name": "Yao amis admin",
-    "url": "https://github.com/wwsheng009",
-    "author": "wwsheng009"
+    "name": "NewDream",
+    "url": "https://github.com/Myeeoo/NewDream",
+    "author": "eeoo"
   },
   "title": "新梦圆",
   "navigation": {
     "items": [
       {
-        "text": "Soy Admin",
+        "text": "管理平台",
         "url": "/soy-admin"
       },
       {
-        "text": "Amis admin",
+        "text": "管理后台",
         "url": "/amis-admin"
       },
       {
-        "text": "Amis editor",
+        "text": "Amis编辑器",
         "url": "/amis-editor"
       },
       {
-        "text": "Xgen admin",
+        "text": "X admin",
         "url": "/admin/login/admin"
+      },
+      {
+        "text":"看板",
+        "url":"/soy-admin/#/dashboard/workbench"
       }
     ]
   },
   "quicklinks": {
     "links": [
       {
-        "title": "Amis-Admin",
+        "title": "管理后台",
         "url": "/amis-admin",
         "desc": "使用Amis作为前端构建的管理后台",
         "target": "_self"
       },
       {
-        "title": "Soy-Admin",
+        "title": "管理平台",
         "url": "/soy-admin",
         "desc": "使用Soybean框架作为前端构建的管理后台",
         "target": "_self"
       },
       {
-        "title": "Xgen admin",
+        "title": "X admin",
         "url": "/admin/login/admin",
         "desc": "Yao 内置管理端",
         "target": "_self"
       },
       {
-        "title": "Amis-Editor",
+        "title": "Amis-编辑器",
         "url": "/amis-editor",
         "desc": "Amis页面编辑器",
         "target": "_self"
-      },
-      {
-        "title": "Docs",
-        "url": "https://wwsheng009.github.io/yao-docs",
-        "desc": "项目使用文档",
-        "target": "_blank"
       }
     ]
   }
