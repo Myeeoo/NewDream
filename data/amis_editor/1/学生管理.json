@@ -1,18 +1,200 @@
 {
+  "pullRefresh": {
+    "disabled": true
+  },
+  "asideResizor": false,
+  "asideSticky": false,
+  "data": {},
+  "editorState": "default",
   "regions": [
     "body",
     "header",
     "toolbar"
   ],
-  "pullRefresh": {
-    "disabled": true
-  },
-  "editorState": "default",
-  "data": {},
   "id": "u:033abf50dd76",
-  "asideResizor": false,
   "type": "page",
   "title": "学生管理",
-  "asideSticky": false,
-  "body": []
+  "body": [
+    {
+      "headerToolbar": [
+        {
+          "id": "u:7bce126a9c7e",
+          "type": "flex",
+          "direction": "row",
+          "justify": "flex-start",
+          "alignItems": "stretch",
+          "style": {
+            "position": "static"
+          },
+          "items": [
+            {
+              "behavior": [
+                "Insert",
+                "BulkEdit",
+                "BulkDelete"
+              ],
+              "body": [],
+              "wrapperBody": false,
+              "style": {
+                "flexBasis": "auto",
+                "flex": "1 1 auto",
+                "alignItems": "stretch",
+                "flexGrow": 1,
+                "justifyContent": "flex-start",
+                "position": "static",
+                "display": "flex",
+                "flexDirection": "row",
+                "flexWrap": "nowrap"
+              },
+              "id": "u:c81b718afa11",
+              "type": "container",
+              "align": "left"
+            },
+            {
+              "wrapperBody": false,
+              "style": {
+                "flexWrap": "nowrap",
+                "alignItems": "stretch",
+                "flexGrow": 1,
+                "flex": "1 1 auto",
+                "flexBasis": "auto",
+                "display": "flex",
+                "flexDirection": "row",
+                "justifyContent": "flex-end",
+                "position": "static"
+              },
+              "id": "u:0a875f533985",
+              "type": "container",
+              "align": "right",
+              "behavior": [
+                "FuzzyQuery"
+              ],
+              "body": []
+            }
+          ]
+        }
+      ],
+      "syncLocation": true,
+      "primaryField": "id",
+      "footerToolbar": [
+        {
+          "style": {
+            "position": "static"
+          },
+          "items": [
+            {
+              "id": "u:2f55fb15994f",
+              "type": "container",
+              "align": "left",
+              "body": [],
+              "wrapperBody": false,
+              "style": {
+                "display": "flex",
+                "justifyContent": "flex-start",
+                "flexGrow": 1,
+                "flex": "1 1 auto",
+                "position": "static",
+                "flexBasis": "auto",
+                "flexDirection": "row",
+                "alignItems": "stretch",
+                "flexWrap": "nowrap"
+              }
+            },
+            {
+              "style": {
+                "display": "flex",
+                "flexBasis": "auto",
+                "position": "static",
+                "flex": "1 1 auto",
+                "flexWrap": "nowrap",
+                "flexDirection": "row",
+                "alignItems": "stretch",
+                "justifyContent": "flex-end",
+                "flexGrow": 1
+              },
+              "id": "u:859307ccf987",
+              "type": "container",
+              "align": "right",
+              "body": [
+                {
+                  "behavior": "Pagination",
+                  "layout": [
+                    "total",
+                    "perPage",
+                    "pager"
+                  ],
+                  "perPage": 10,
+                  "perPageAvailable": [
+                    10,
+                    20,
+                    50,
+                    100
+                  ],
+                  "align": "right",
+                  "id": "u:1d6ac1d226ca",
+                  "type": "pagination"
+                }
+              ],
+              "wrapperBody": false
+            }
+          ],
+          "id": "u:cd332ade9642",
+          "type": "flex",
+          "direction": "row",
+          "justify": "flex-start",
+          "alignItems": "stretch"
+        }
+      ],
+      "mode": "table2",
+      "api": {
+        "messages": {},
+        "method": "get",
+        "requestAdaptor": "",
+        "url": "http://127.0.0.1:5099/api/v1/system/model/students/preview",
+        "adaptor": ""
+      },
+      "type": "crud2",
+      "columns": [
+        {
+          "title": "邮箱",
+          "name": "email",
+          "id": "u:dc89c35d0bc9",
+          "type": "tpl"
+        },
+        {
+          "type": "tpl",
+          "title": "姓名",
+          "name": "name",
+          "id": "u:187166a0f85b"
+        },
+        {
+          "title": "联系电话",
+          "name": "phone",
+          "id": "u:f94e1bf27515",
+          "type": "tpl"
+        },
+        {
+          "name": "sex",
+          "id": "u:5f3d00a33854",
+          "type": "tpl",
+          "title": "性别"
+        },
+        {
+          "type": "tpl",
+          "title": "状态",
+          "name": "state",
+          "id": "u:dd0dbd7e8a07"
+        },
+        {
+          "title": "是否接送",
+          "name": "students_ispickup",
+          "id": "u:4d977785a07f",
+          "type": "tpl"
+        }
+      ],
+      "id": "u:1759e6a1c487",
+      "dsType": "api",
+      "loadType": "pagination"
+    }
+  ]
 }

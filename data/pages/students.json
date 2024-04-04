@@ -1,0 +1,568 @@
+{
+    "body": [
+      {
+        "api": {
+          "data": {
+            "&": "$$"
+          },
+          "method": "post",
+          "url": "/api/v1/system/model/students/search"
+        },
+        "autoFillHeight": true,
+        "bulkActions": [
+          {
+            "actionType": "ajax",
+            "api": "delete:/api/v1/system/model/students/delete/${ids|raw}",
+            "confirmText": "你确定要批量删除选中行吗?",
+            "label": "批量删除",
+            "type": "button"
+          }
+        ],
+        "columns": [
+          {
+            "label": "ID",
+            "name": "ID",
+            "quickEdit": false,
+            "searchable": true,
+            "sortable": true,
+            "type": "number"
+          },
+          {
+            "label": "name",
+            "name": "name",
+            "quickEdit": {
+              "maxLength": 200,
+              "required": true,
+              "saveImmediately": true,
+              "type": "input-text"
+            },
+            "searchable": true,
+            "sortable": true,
+            "type": "text"
+          },
+          {
+            "label": "phone",
+            "name": "phone",
+            "quickEdit": {
+              "maxLength": 200,
+              "saveImmediately": true,
+              "type": "input-text"
+            },
+            "searchable": true,
+            "sortable": true,
+            "type": "text"
+          },
+          {
+            "label": "email",
+            "name": "email",
+            "quickEdit": {
+              "maxLength": 200,
+              "saveImmediately": true,
+              "type": "input-text"
+            },
+            "searchable": true,
+            "sortable": true,
+            "type": "text"
+          },
+          {
+            "label": "是否接送",
+            "name": "IsPickup",
+            "quickEdit": {
+              "saveImmediately": true,
+              "type": "input-number"
+            },
+            "searchable": true,
+            "sortable": true,
+            "type": "number"
+          },
+          {
+            "label": "sex",
+            "name": "sex",
+            "quickEdit": {
+              "maxLength": 200,
+              "saveImmediately": true,
+              "type": "input-text"
+            },
+            "searchable": true,
+            "sortable": true,
+            "type": "text"
+          },
+          {
+            "format": "YYYY-MM-DD",
+            "label": "loginuptime",
+            "name": "loginuptime",
+            "quickEdit": {
+              "format": "YYYY-MM-DD",
+              "saveImmediately": true,
+              "type": "input-date"
+            },
+            "searchable": true,
+            "sortable": true,
+            "type": "date"
+          },
+          {
+            "label": "state",
+            "name": "state",
+            "quickEdit": {
+              "maxLength": 200,
+              "saveImmediately": true,
+              "type": "input-text"
+            },
+            "searchable": true,
+            "sortable": true,
+            "type": "text"
+          },
+          {
+            "buttons": [
+              {
+                "actionType": "dialog",
+                "dialog": {
+                  "body": {
+                    "body": [
+                      {
+                        "label": "ID",
+                        "name": "ID",
+                        "type": "static-number"
+                      },
+                      {
+                        "label": "name",
+                        "name": "name",
+                        "type": "static-text"
+                      },
+                      {
+                        "label": "phone",
+                        "name": "phone",
+                        "type": "static-text"
+                      },
+                      {
+                        "label": "email",
+                        "name": "email",
+                        "type": "static-text"
+                      },
+                      {
+                        "label": "是否接送",
+                        "name": "IsPickup",
+                        "type": "static-number"
+                      },
+                      {
+                        "label": "sex",
+                        "name": "sex",
+                        "type": "static-text"
+                      },
+                      {
+                        "format": "YYYY-MM-DD",
+                        "label": "loginuptime",
+                        "name": "loginuptime",
+                        "type": "static-date"
+                      },
+                      {
+                        "label": "state",
+                        "name": "state",
+                        "type": "static-text"
+                      }
+                    ],
+                    "type": "form"
+                  },
+                  "size": "lg",
+                  "title": "查看"
+                },
+                "icon": "fa fa-eye",
+                "tooltip": "查看",
+                "type": "button"
+              },
+              {
+                "actionType": "dialog",
+                "dialog": {
+                  "body": {
+                    "api": "post:/api/v1/system/model/students/update/$id",
+                    "body": [
+                      {
+                        "isID": true,
+                        "label": "ID",
+                        "name": "ID",
+                        "static": true,
+                        "type": "input-number"
+                      },
+                      {
+                        "label": "name",
+                        "maxLength": 200,
+                        "name": "name",
+                        "required": true,
+                        "type": "input-text"
+                      },
+                      {
+                        "label": "phone",
+                        "maxLength": 200,
+                        "name": "phone",
+                        "type": "input-text"
+                      },
+                      {
+                        "label": "email",
+                        "maxLength": 200,
+                        "name": "email",
+                        "type": "input-text"
+                      },
+                      {
+                        "label": "是否接送",
+                        "name": "IsPickup",
+                        "type": "input-number"
+                      },
+                      {
+                        "label": "sex",
+                        "maxLength": 200,
+                        "name": "sex",
+                        "type": "input-text"
+                      },
+                      {
+                        "format": "YYYY-MM-DD",
+                        "label": "loginuptime",
+                        "name": "loginuptime",
+                        "type": "input-date"
+                      },
+                      {
+                        "label": "state",
+                        "maxLength": 200,
+                        "name": "state",
+                        "type": "input-text"
+                      }
+                    ],
+                    "name": "update",
+                    "silentPolling": false,
+                    "trimValues": true,
+                    "type": "form"
+                  },
+                  "size": "lg",
+                  "title": "更新",
+                  "type": "dialog"
+                },
+                "icon": "fa fa-pencil",
+                "tooltip": "更新",
+                "type": "button"
+              },
+              {
+                "actionType": "ajax",
+                "api": "delete:/api/v1/system/model/students/delete/$id",
+                "confirmText": "你确定要删除行${id}?",
+                "icon": "fa fa-times text-danger",
+                "tooltip": "删除",
+                "type": "button"
+              }
+            ],
+            "label": "操作",
+            "type": "operation",
+            "width": 100
+          }
+        ],
+        "filter": {
+          "actions": [
+            {
+              "actionType": "clear-and-submit",
+              "label": "清空",
+              "level": "default",
+              "type": "button"
+            },
+            {
+              "actionType": "reset-and-submit",
+              "label": "重置",
+              "level": "default",
+              "type": "button"
+            },
+            {
+              "actionType": "submit",
+              "label": "搜索",
+              "level": "primary",
+              "type": "button"
+            }
+          ],
+          "body": [
+            {
+              "label": "ID",
+              "name": "ID",
+              "type": "input-number"
+            },
+            {
+              "label": "name",
+              "maxLength": 200,
+              "name": "name",
+              "type": "input-text"
+            },
+            {
+              "label": "phone",
+              "maxLength": 200,
+              "name": "phone",
+              "type": "input-text"
+            },
+            {
+              "label": "email",
+              "maxLength": 200,
+              "name": "email",
+              "type": "input-text"
+            },
+            {
+              "label": "是否接送",
+              "name": "IsPickup",
+              "type": "input-number"
+            },
+            {
+              "label": "sex",
+              "maxLength": 200,
+              "name": "sex",
+              "type": "input-text"
+            },
+            {
+              "format": "YYYY-MM-DD",
+              "label": "loginuptime",
+              "name": "loginuptime",
+              "type": "input-date"
+            },
+            {
+              "label": "state",
+              "maxLength": 200,
+              "name": "state",
+              "type": "input-text"
+            }
+          ],
+          "mode": "inline",
+          "name": "filter",
+          "silentPolling": false,
+          "title": "",
+          "trimValues": true
+        },
+        "filterDefaultVisible": false,
+        "filterTogglable": true,
+        "footerToolbar": [
+          "statistics",
+          "switch-per-page",
+          "pagination",
+          "load-more",
+          "export-csv",
+          "export-excel"
+        ],
+        "headerToolbar": [
+          {
+            "type": "columns-toggler"
+          },
+          "filter-toggler",
+          "reload",
+          "bulkActions",
+          {
+            "align": "right",
+            "type": "drag-toggler"
+          },
+          {
+            "actionType": "dialog",
+            "align": "right",
+            "dialog": {
+              "body": {
+                "api": "post:/api/v1/system/model/students/create",
+                "body": [
+                  {
+                    "label": "name",
+                    "maxLength": 200,
+                    "name": "name",
+                    "required": true,
+                    "type": "input-text"
+                  },
+                  {
+                    "label": "phone",
+                    "maxLength": 200,
+                    "name": "phone",
+                    "type": "input-text"
+                  },
+                  {
+                    "label": "email",
+                    "maxLength": 200,
+                    "name": "email",
+                    "type": "input-text"
+                  },
+                  {
+                    "label": "是否接送",
+                    "name": "IsPickup",
+                    "type": "input-number"
+                  },
+                  {
+                    "label": "sex",
+                    "maxLength": 200,
+                    "name": "sex",
+                    "type": "input-text"
+                  },
+                  {
+                    "format": "YYYY-MM-DD",
+                    "label": "loginuptime",
+                    "name": "loginuptime",
+                    "type": "input-date"
+                  },
+                  {
+                    "label": "state",
+                    "maxLength": 200,
+                    "name": "state",
+                    "type": "input-text"
+                  }
+                ],
+                "name": "create",
+                "silentPolling": false,
+                "type": "form"
+              },
+              "size": "lg",
+              "title": "新增",
+              "type": "dialog"
+            },
+            "icon": "fa fa-plus pull-left",
+            "label": "新增",
+            "level": "primary",
+            "type": "button"
+          },
+          {
+            "actionType": "dialog",
+            "dialog": {
+              "body": {
+                "api": {
+                  "data": {
+                    "batch": {
+                      "&": {
+                        "$excel": {
+                          "IsPickup": "${IsPickup}",
+                          "email": "${email}",
+                          "loginuptime": "${loginuptime}",
+                          "name": "${name}",
+                          "phone": "${phone}",
+                          "sex": "${sex}",
+                          "state": "${state}"
+                        }
+                      }
+                    }
+                  },
+                  "method": "post",
+                  "url": "/api/v1/system/model/students/batch_create"
+                },
+                "body": [
+                  {
+                    "tpl": "Excel字段列表：name|phone|email|IsPickup|sex|loginuptime|state",
+                    "type": "tpl"
+                  },
+                  {
+                    "name": "excel",
+                    "type": "input-excel"
+                  },
+                  {
+                    "addable": true,
+                    "columns": [
+                      {
+                        "label": "name",
+                        "name": "name",
+                        "quickEdit": {
+                          "maxLength": 200,
+                          "required": true,
+                          "saveImmediately": true,
+                          "type": "input-text"
+                        },
+                        "searchable": true,
+                        "sortable": true,
+                        "type": "text"
+                      },
+                      {
+                        "label": "phone",
+                        "name": "phone",
+                        "quickEdit": {
+                          "maxLength": 200,
+                          "saveImmediately": true,
+                          "type": "input-text"
+                        },
+                        "searchable": true,
+                        "sortable": true,
+                        "type": "text"
+                      },
+                      {
+                        "label": "email",
+                        "name": "email",
+                        "quickEdit": {
+                          "maxLength": 200,
+                          "saveImmediately": true,
+                          "type": "input-text"
+                        },
+                        "searchable": true,
+                        "sortable": true,
+                        "type": "text"
+                      },
+                      {
+                        "label": "是否接送",
+                        "name": "IsPickup",
+                        "quickEdit": {
+                          "saveImmediately": true,
+                          "type": "input-number"
+                        },
+                        "searchable": true,
+                        "sortable": true,
+                        "type": "number"
+                      },
+                      {
+                        "label": "sex",
+                        "name": "sex",
+                        "quickEdit": {
+                          "maxLength": 200,
+                          "saveImmediately": true,
+                          "type": "input-text"
+                        },
+                        "searchable": true,
+                        "sortable": true,
+                        "type": "text"
+                      },
+                      {
+                        "format": "YYYY-MM-DD",
+                        "label": "loginuptime",
+                        "name": "loginuptime",
+                        "quickEdit": {
+                          "format": "YYYY-MM-DD",
+                          "saveImmediately": true,
+                          "type": "input-date"
+                        },
+                        "searchable": true,
+                        "sortable": true,
+                        "type": "date"
+                      },
+                      {
+                        "label": "state",
+                        "name": "state",
+                        "quickEdit": {
+                          "maxLength": 200,
+                          "saveImmediately": true,
+                          "type": "input-text"
+                        },
+                        "searchable": true,
+                        "sortable": true,
+                        "type": "text"
+                      }
+                    ],
+                    "copyable": true,
+                    "editable": true,
+                    "name": "excel",
+                    "removable": true,
+                    "showIndex": true,
+                    "type": "input-table"
+                  }
+                ],
+                "mode": "normal",
+                "silentPolling": false,
+                "type": "form"
+              },
+              "size": "full",
+              "title": "批量新增",
+              "type": "dialog"
+            },
+            "icon": "fa fa-plus pull-left",
+            "label": "批量新增",
+            "level": "primary",
+            "type": "button"
+          }
+        ],
+        "itemActions": [],
+        "keepItemSelectionOnPageChange": true,
+        "perPage": 10,
+        "primaryField": "id",
+        "quickSaveItemApi": "post:/api/v1/system/model/students/update/${id}",
+        "syncLocation": false,
+        "type": "crud"
+      }
+    ],
+    "type": "page"
+  }
